@@ -1,0 +1,14 @@
+.dropdown {
+  position: fixed;
+  top: 6vh;
+  /* left: 0; */
+  width: 100%;
+  background-color: #fff;
+  height: 92vh;
+  /* border-top: 1px solid #aaa; */
+  padding-top: 0.75rem;
+}
+.dropdown a {
+  font-size: 1.2rem;
+  margin: 2% auto;
+}

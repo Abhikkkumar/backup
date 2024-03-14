@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html events</title>
+  </head>
+  <body>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="night-sky"
+            src="https://images.pexels.com/photos/19312381/pexels-photo-19312381/free-photo-of-waiting-for-the-light-of-the-stars.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="night-sky"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="far-mountain"
+            src="https://images.pexels.com/photos/19194460/pexels-photo-19194460/free-photo-of-landscape-of-mountains-and-hills.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="far-mountain"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="mt-fuji"
+            src="https://images.pexels.com/photos/1108701/pexels-photo-1108701.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="mt-fuji"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="fox"
+            src="https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="fox"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="rain"
+            src="https://images.pexels.com/photos/913807/pexels-photo-913807.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="rain"
+          />
+        </li>
+        <li id="google"><a href="http://google.com">Google</a></li>
+      </ul>
+    </div>
+    <script>
+      /* 
+      // NOT RECOMMENDED-- onclick gives less functionality
+      // document.getElementById("rain").onclick= function(){
+      //     alert("RAIN Clicked!");
+      // }
+*/
+
+      //---------------
+      /*
+
+            // topic to read in event- type, timestamp, defaultPrevented, target, toElement,
+            //             srcElement, currentTarget, clientX, clientY, screenX, screenY
+            //             tiltX, tiltY
+            //          altKey, shiftKey, ctrlKey, keyCode
+        
+*/
+      //------------------
+
+      /*
+        // better way to add event listener
+        document.querySelector("#rain").addEventListener("click",function(eventObject){
+            alert("Rain Clicked Again!");
+            console.log(eventObject);
+        },false)
+
+*/
+      //------------------------
+
+      //parameters of 'addEventListener()' :-
+      // 1st parameter: "nameOfEvent"
+      // 2nd parameter: function which can take 'eventObject' as callback
+      // 3rd parameter: true (event capturing - event move from top elm to bottom elm) / false (event bubbling- event move from bottom elem to top elem)
+      //  3rd parameter is 'false' by default
+      /*
+      document
+        .querySelector("#images")
+        .addEventListener("click", () => console.log("Images Clicked!"), false);
+      document.querySelector("#fox").addEventListener(
+        "click",
+        (e) => {
+          console.log("Fox Clicked!");
+        //  e.stopPropagation(); // stops the bubbling of event Propagation
+        },
+        false
+      );
+      // NOTE :- In above 2 cases, "event bubbling" is used as 3rd parameter is 'false'. So, 'Fox Clicked' will appear first.
+
+*/
+      /*
+      //----------- preventDefault() 
+      document.getElementById("google").addEventListener("click",(e)=>{
+          console.log("Google Clicked!");
+          e.preventDefault(); // to prevent default behaviour of an element
+          e.stopPropagation();//stop event bubbling
+      })
+*/
+      document.querySelector("#images").addEventListener(
+        "click",
+        function (e) {
+        //   console.log(e.target.tagName);// show the tag which is clicked
+          if (e.target.tagName === "IMG") {
+              console.log(e.target.id);// shows 'id' of clicked elem
+            let removeIt = e.target.parentNode; // when we click on 'img', then we want to select its parent which is a 'li' tag
+            removeIt.remove();  // removes the selected element from display
+            // removeIt.parentNode.removeChild(removeIt);// also removes the selected element
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

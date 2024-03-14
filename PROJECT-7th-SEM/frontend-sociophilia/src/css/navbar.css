@@ -1,0 +1,104 @@
+/* img{
+    width: 10%;
+    object-fit: contain;
+} */
+body {
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  padding: 0 1%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 5px 5px #e0dcdc;
+}
+.nav-list {
+  min-width: 83%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.n-one {
+  width: 12%;
+  display: grid;
+  place-items: center;
+}
+.insta-logo {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+.nav-list a {
+  margin: 0 0.3rem;
+}
+/* .nav-item {
+  padding: 7px 20px;
+  font-size: 18px;
+  color: black;
+} */
+
+.home-search > input {
+  /* background-color: #385c77; */
+  background-color: blanchedalmond;
+  border-radius: 15px;
+  border: none;
+  padding: 3px;
+  height: 35px;
+  /* color: #fff; */
+  text-align: center;
+}
+.home-search > input::placeholder {
+  /* color:#fff; */
+  text-align: center;
+}
+
+.primaryBtn {
+  cursor: pointer;
+  font-weight: bolder;
+  padding: 13px 25px;
+  font-size: 0.8rem;
+  border: none;
+  color: white;
+  background: #db183c;
+  border-radius: 15px;
+  transition: all 0.25s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -10px rgba(219, 24, 44, 0.6);
+}
+
+/* mobile header */
+.navbarM {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2%;
+  box-shadow: 1px 1px 10px 1px #aaa;
+  z-index: 3;
+  /* position: fixed;
+  top: 0; */
+  width: 100%;
+  background-color: #fff;
+}
+.navbarM > img {
+  width: 20%;
+}
+@media (min-width: 769px) {
+  .navbarM {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>hobby Cue-login</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a id="hobbycue-logo" class="navbar-brand" href=""
+          ><img src="HobbyCue-Logo.png" alt="logo"
+        /></a>
+        <svg
+          class="lens-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M10.25 3C6.25778 3 3 6.25778 3 10.25C3 14.2422 6.25778 17.5 10.25 17.5C11.8866 17.5 13.3945 16.9465 14.6104 16.0254L19.293 20.707C19.3851 20.803 19.4955 20.8796 19.6176 20.9324C19.7397 20.9852 19.8712 21.0131 20.0042 21.0144C20.1373 21.0158 20.2692 20.9906 20.3924 20.9403C20.5156 20.89 20.6275 20.8157 20.7216 20.7216C20.8157 20.6275 20.89 20.5156 20.9403 20.3924C20.9906 20.2692 21.0158 20.1373 21.0144 20.0042C21.0131 19.8712 20.9852 19.7397 20.9324 19.6176C20.8796 19.4955 20.803 19.3851 20.707 19.293L16.0254 14.6104C16.9465 13.3945 17.5 11.8866 17.5 10.25C17.5 6.25778 14.2422 3 10.25 3ZM10.25 5C13.1613 5 15.5 7.33866 15.5 10.25C15.5 11.6479 14.957 12.9103 14.0742 13.8486C13.9883 13.9108 13.9128 13.9863 13.8506 14.0723C12.9121 14.9562 11.6489 15.5 10.25 15.5C7.33866 15.5 5 13.1613 5 10.25C5 7.33866 7.33866 5 10.25 5Z"
+            fill="#8064A2"
+          />
+        </svg>
+        <svg
+          class="bell-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <g clip-path="url(#clip0_5034_105)">
+            <path
+              d="M12 22C13.1 22 14 21.1 14 20H9.99999C9.99999 21.1 10.89 22 12 22ZM18 16V11C18 7.93 16.36 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.62999 5.36 5.99999 7.92 5.99999 11V16L4.70999 17.29C4.07999 17.92 4.51999 19 5.40999 19H18.58C19.47 19 19.92 17.92 19.29 17.29L18 16Z"
+              fill="#8064A2"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_5034_105">
+              <rect width="24" height="24" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex search" role="search">
+            <input
+              type="email"
+              class="form-control search"
+              placeholder="Search here..."
+              aria-label="Email ID"
+              aria-describedby="basic-addon2"
+            />
+            <span class="input-group-text search" id="basic-addon2"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M6.83333 2C4.17185 2 2 4.17185 2 6.83333C2 9.49481 4.17185 11.6667 6.83333 11.6667C7.92439 11.6667 8.92964 11.2977 9.74023 10.6836L12.862 13.8047C12.9234 13.8687 12.997 13.9198 13.0784 13.9549C13.1598 13.9901 13.2474 14.0087 13.3361 14.0096C13.4248 14.0105 13.5128 13.9937 13.5949 13.9602C13.6771 13.9267 13.7517 13.8771 13.8144 13.8144C13.8771 13.7517 13.9267 13.6771 13.9602 13.5949C13.9937 13.5128 14.0105 13.4248 14.0096 13.3361C14.0087 13.2474 13.9901 13.1598 13.9549 13.0784C13.9198 12.997 13.8687 12.9234 13.8047 12.862L10.6836 9.74023C11.2977 8.92964 11.6667 7.92439 11.6667 6.83333C11.6667 4.17185 9.49481 2 6.83333 2ZM6.83333 3.33333C8.77423 3.33333 10.3333 4.89244 10.3333 6.83333C10.3333 7.76524 9.97135 8.60687 9.38281 9.23242C9.32552 9.2739 9.2752 9.32422 9.23372 9.38151C8.60803 9.9708 7.7659 10.3333 6.83333 10.3333C4.89244 10.3333 3.33333 8.77423 3.33333 6.83333C3.33333 4.89244 4.89244 3.33333 6.83333 3.33333Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </form>
+          <div class="nav-div">
+            <ul class="nav-options navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-star-fill"></i>
+
+                  <span class="bold-1">Hobbies</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">People - Community</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Places - Venues</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Programs - Events</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Products - Store</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Blogs</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12 2.03906C6.49875 2.03906 2.03906 6.49875 2.03906 12C2.03906 17.5013 6.49875 21.9609 12 21.9609C17.5013 21.9609 21.9609 17.5013 21.9609 12C21.9609 6.49875 17.5013 2.03906 12 2.03906ZM16.7405 7.83656L14.0142 13.7991C13.9706 13.8942 13.8942 13.9706 13.7991 14.0142L7.83656 16.7405C7.46953 16.9083 7.09172 16.53 7.25906 16.163L9.98531 10.2005C10.0289 10.1053 10.1053 10.0289 10.2005 9.98531L16.163 7.25906C16.53 7.09172 16.9083 7.47 16.7405 7.83656Z"
+                      fill="#8064A2"
+                    />
+                    <path
+                      d="M12.7355 11.8532C12.7303 11.8293 12.7242 11.8054 12.7172 11.782C12.7102 11.759 12.7017 11.7356 12.6923 11.7131C12.683 11.6906 12.6727 11.6681 12.6614 11.6465C12.6497 11.6249 12.637 11.6038 12.6234 11.5837C12.6098 11.5631 12.5953 11.5434 12.5798 11.5242C12.5644 11.5054 12.5475 11.4871 12.5302 11.4698C12.5128 11.4524 12.4945 11.4356 12.4758 11.4201C12.4566 11.4046 12.4369 11.3901 12.4163 11.3765C12.3961 11.3629 12.375 11.3502 12.3534 11.3385C12.3319 11.3273 12.3094 11.3165 12.2869 11.3076C12.2644 11.2982 12.2409 11.2898 12.218 11.2827C12.1945 11.2752 12.1706 11.2692 12.1467 11.2645C12.1223 11.2598 12.098 11.256 12.0736 11.2537C12.0248 11.2485 11.9752 11.2485 11.9264 11.2537C11.902 11.256 11.8777 11.2598 11.8533 11.2645C11.8294 11.2692 11.8055 11.2752 11.782 11.2827C11.7591 11.2898 11.7356 11.2982 11.7131 11.3076C11.6906 11.3165 11.6681 11.3273 11.6466 11.3385C11.625 11.3502 11.6039 11.3629 11.5837 11.3765C11.5631 11.3901 11.5434 11.4046 11.5242 11.4201C11.5055 11.4356 11.4867 11.4524 11.4698 11.4698C11.4525 11.4871 11.4356 11.5054 11.4202 11.5242C11.4047 11.5434 11.3897 11.5631 11.3766 11.5837C11.363 11.6038 11.3503 11.6249 11.3386 11.6465C11.3273 11.6681 11.3166 11.6906 11.3077 11.7131C11.2983 11.7356 11.2898 11.759 11.2828 11.782C11.2753 11.8054 11.2692 11.8293 11.2645 11.8532C11.2598 11.8776 11.2561 11.902 11.2538 11.9263C11.2514 11.9507 11.25 11.9756 11.25 11.9999C11.25 12.0243 11.2514 12.0492 11.2538 12.0735C11.2561 12.0979 11.2598 12.1223 11.2645 12.1467C11.2692 12.1706 11.2753 12.1945 11.2828 12.2179C11.2898 12.2409 11.2983 12.2643 11.3077 12.2868C11.3166 12.3093 11.3273 12.3318 11.3386 12.3534C11.3503 12.3749 11.363 12.396 11.3766 12.4162C11.3902 12.4368 11.4047 12.4565 11.4202 12.4757C11.4356 12.4945 11.4525 12.5127 11.4698 12.5301C11.4872 12.5474 11.5055 12.5643 11.5242 12.5798C11.5434 12.5952 11.5631 12.6098 11.5837 12.6234C11.6039 12.637 11.625 12.6496 11.6466 12.6613C11.6681 12.6726 11.6906 12.6829 11.7131 12.6923C11.7356 12.7016 11.7591 12.7101 11.782 12.7171C11.8055 12.7241 11.8294 12.7302 11.8533 12.7354C11.8777 12.7401 11.902 12.7438 11.9264 12.7462C11.9508 12.7485 11.9756 12.7499 12 12.7499C12.0244 12.7499 12.0492 12.7485 12.0736 12.7462C12.098 12.7438 12.1223 12.7401 12.1467 12.7354C12.1706 12.7302 12.1945 12.7241 12.218 12.7171C12.2409 12.7101 12.2644 12.7016 12.2869 12.6923C12.3094 12.6829 12.3319 12.6726 12.353 12.6613C12.375 12.6496 12.3961 12.637 12.4163 12.6234C12.4369 12.6098 12.4566 12.5952 12.4753 12.5798C12.4945 12.5643 12.5128 12.5474 12.5302 12.5301C12.5475 12.5127 12.5644 12.4945 12.5798 12.4757C12.5953 12.4565 12.6098 12.4368 12.6234 12.4162C12.637 12.396 12.6497 12.3749 12.6609 12.3534C12.6727 12.3318 12.683 12.3093 12.6923 12.2868C12.7017 12.2643 12.7102 12.2409 12.7172 12.2179C12.7242 12.1945 12.7303 12.1706 12.7355 12.1467C12.7402 12.1223 12.7439 12.0979 12.7463 12.0735C12.7486 12.0492 12.75 12.0243 12.75 11.9999C12.75 11.9756 12.7486 11.9507 12.7463 11.9263C12.7439 11.902 12.7402 11.8776 12.7355 11.8532Z"
+                      fill="#8064A2"
+                    />
+                  </svg>
+                  <span class="bold-1">Explore</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">People - Community</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Places - Venues</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Programs - Events</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Products - Store</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Blogs</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_3083_517)">
+                      <path
+                        d="M17 3H7C5.9 3 5 3.9 5 5V21L12 18L19 21V5C19 3.9 18.1 3 17 3Z"
+                        fill="#8064A2"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_3083_517">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_3083_520)">
+                      <path
+                        d="M12.0001 22C13.1001 22 14.0001 21.1 14.0001 20H10.0001C10.0001 21.1 10.8901 22 12.0001 22ZM18.0001 16V11C18.0001 7.93 16.3601 5.36 13.5001 4.68V4C13.5001 3.17 12.8301 2.5 12.0001 2.5C11.1701 2.5 10.5001 3.17 10.5001 4V4.68C7.63005 5.36 6.00005 7.92 6.00005 11V16L4.71005 17.29C4.08005 17.92 4.52005 19 5.41005 19H18.5801C19.4701 19 19.9201 17.92 19.2901 17.29L18.0001 16Z"
+                        fill="#8064A2"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_3083_520">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs></svg
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M21.9198 7.24996V7.37996L20.4598 12.78C20.2873 13.4209 19.907 13.9865 19.3786 14.3882C18.8503 14.7899 18.2036 15.0051 17.5398 15H9.88982C9.13882 15.003 8.41398 14.7243 7.85853 14.2188C7.30308 13.7133 6.95741 13.0179 6.88982 12.27L6.23982 4.90996C6.2173 4.66064 6.10207 4.42884 5.91692 4.26035C5.73177 4.09186 5.49016 3.99895 5.23982 3.99996H3.06982C2.80461 3.99996 2.55025 3.89461 2.36272 3.70707C2.17518 3.51953 2.06982 3.26518 2.06982 2.99996C2.06982 2.73475 2.17518 2.48039 2.36272 2.29286C2.55025 2.10532 2.80461 1.99996 3.06982 1.99996H5.23982C5.99083 1.99692 6.71567 2.27566 7.27112 2.78112C7.82657 3.28659 8.17224 3.982 8.23982 4.72996V4.99996H19.9298C20.2149 4.99773 20.4971 5.05646 20.7577 5.17222C21.0182 5.28798 21.2509 5.4581 21.4403 5.67117C21.6297 5.88424 21.7714 6.13534 21.8558 6.40764C21.9402 6.67993 21.9655 6.96712 21.9298 7.24996H21.9198Z"
+                      fill="#8064A2"
+                    />
+                    <path
+                      d="M9.06982 22.0001C10.4505 22.0001 11.5698 20.8808 11.5698 19.5001C11.5698 18.1193 10.4505 17.0001 9.06982 17.0001C7.68911 17.0001 6.56982 18.1193 6.56982 19.5001C6.56982 20.8808 7.68911 22.0001 9.06982 22.0001Z"
+                      fill="#8064A2"
+                    />
+                    <path
+                      d="M17.0698 22.0001C18.4505 22.0001 19.5698 20.8808 19.5698 19.5001C19.5698 18.1193 18.4505 17.0001 17.0698 17.0001C15.6891 17.0001 14.5698 18.1193 14.5698 19.5001C14.5698 20.8808 15.6891 22.0001 17.0698 22.0001Z"
+                      fill="#8064A2"
+                    /></svg
+                ></a>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-outline-primary btn-blue">
+                <a href="logged-in.html" style="text-decoration: none;">Sign In</a>
+              
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="main-div-1">
+      <div class="sub-one">
+        <h2 class="tag-line" id="tag-line">
+          Explore your <span class="hobby">hobby</span> or
+          <span class="passion">passion</span>
+        </h2>
+        <p class="tag-details">
+          Sign-in to interact with a community of fellow hobbyists and an
+          eco-system of experts, teachers, suppliers, classes, workshops, and
+          places to practice, participate or perform.<span class="hide-me"
+            >Your hobby may be about visual or performing arts, sports, games,
+            gardening, model making, cooking, indoor or outdoor
+            activities…</span
+          >
+        </p>
+        <p class="tag-details hide-me">
+          If you are an expert or a seller, you can Add your Listing and promote
+          yourself, your students, products, services or events. Hop on your
+          hobbyhorse and enjoy the ride.
+        </p>
+      </div>
+      <div class="sub-one" id="form-container">
+        <div class="form-decider">
+          <a href="/index.html"><span>Sign In</span></a>
+          <a href="/form-login.html"
+            ><span style="color: #8064a2; text-decoration: underline">
+              Join In
+            </span></a
+          >
+        </div>
+        <div class="main-form">
+          <div class="d-grid gap-2">
+            <button class="btn btn-outline-primary btn-blue" type="button">
+              <img src="google-icon.svg" alt="google-icon" />
+              Continue with Google
+            </button>
+            <button class="btn btn-outline-primary btn-blue" type="button">
+              <img src="facebook-icon.svg" alt="facebook-icon" />
+              Continue with Facebook
+            </button>
+          </div>
+          <hr />
+          <span id="text-on-hr">Or connect with</span>
+          <div class="opt-input-group">
+            <input class="outline-btn" type="email" placeholder="Email" />
+            <input class="outline-btn" type="password" placeholder="Password" />
+          </div>
+
+          <div class="form-rmn-itm">
+            
+            <p class="tos">By continuing, you agree to our <span>Terms of Service</span>  and <span>Privacy Policy</span>. </p> 
+          </div>
+          <button class="outline-btn btn-blue">Agree and Continue</button>
+        </div>
+      </div>
+      <div class="sub-one">
+        <img class="banao-img-1" src="banao-img-1.png" alt="banao-img-1.png" />
+      </div>
+    </div>
+    <div class="main-div-2">
+      <div class="div-2-card" id="people">
+        <div class="card-level-1">
+          <h2>
+            <span class="svg-wrapper">
+              <svg
+                class="card-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_4242)">
+                  <path
+                    d="M20 21.25C22.7167 21.25 25.1167 21.9 27.0667 22.75C28.8667 23.55 30 25.35 30 27.3V30H10V27.3167C10 25.35 11.1333 23.55 12.9333 22.7667C14.8833 21.9 17.2833 21.25 20 21.25ZM6.66667 21.6667C8.5 21.6667 10 20.1667 10 18.3333C10 16.5 8.5 15 6.66667 15C4.83333 15 3.33333 16.5 3.33333 18.3333C3.33333 20.1667 4.83333 21.6667 6.66667 21.6667ZM8.55 23.5C7.93333 23.4 7.31667 23.3333 6.66667 23.3333C5.01667 23.3333 3.45 23.6833 2.03333 24.3C0.8 24.8333 0 26.0333 0 27.3833V30H7.5V27.3167C7.5 25.9333 7.88333 24.6333 8.55 23.5ZM33.3333 21.6667C35.1667 21.6667 36.6667 20.1667 36.6667 18.3333C36.6667 16.5 35.1667 15 33.3333 15C31.5 15 30 16.5 30 18.3333C30 20.1667 31.5 21.6667 33.3333 21.6667ZM40 27.3833C40 26.0333 39.2 24.8333 37.9667 24.3C36.55 23.6833 34.9833 23.3333 33.3333 23.3333C32.6833 23.3333 32.0667 23.4 31.45 23.5C32.1167 24.6333 32.5 25.9333 32.5 27.3167V30H40V27.3833ZM20 10C22.7667 10 25 12.2333 25 15C25 17.7667 22.7667 20 20 20C17.2333 20 15 17.7667 15 15C15 12.2333 17.2333 10 20 10Z"
+                    fill="#8064A2"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_4242">
+                    <rect width="40" height="40" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+            <span class="text-content">People</span>
+          </h2>
+          <p>
+            Find a teacher, coach, or expert for your hobby interest in your
+            locality. Find a partner, teammate, accompanist or collaborator.
+          </p>
+        </div>
+        <button type="button" class="btn btn-outline-primary">Connect</button>
+      </div>
+      <div class="div-2-card" id="place">
+        <div class="card-level-1">
+          <h2>
+            <svg
+              class="card-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1_4263)">
+                <path
+                  d="M20.0002 3.33333C13.5502 3.33333 8.3335 8.55 8.3335 15C8.3335 23.75 20.0002 36.6667 20.0002 36.6667C20.0002 36.6667 31.6668 23.75 31.6668 15C31.6668 8.55 26.4502 3.33333 20.0002 3.33333ZM20.0002 19.1667C17.7002 19.1667 15.8335 17.3 15.8335 15C15.8335 12.7 17.7002 10.8333 20.0002 10.8333C22.3002 10.8333 24.1668 12.7 24.1668 15C24.1668 17.3 22.3002 19.1667 20.0002 19.1667Z"
+                  fill="#77933C"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_4263">
+                  <rect width="40" height="40" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            Place
+          </h2>
+          <p>
+            Find a class, school, playground, auditorium, studio, shop or an
+            event venue. Book a slot at venues that allow booking through
+            hobbycue.
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-outline-primary">Meet up</button>
+      </div>
+      <div class="div-2-card" id="product">
+        <div class="card-level-1">
+          <h2>
+            <svg
+              class="card-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1_4253)">
+                <path
+                  d="M28.6832 14.9997L21.3832 4.06636C21.0665 3.5997 20.5332 3.36636 19.9998 3.36636C19.4665 3.36636 18.9332 3.5997 18.6165 4.08303L11.3165 14.9997H3.33317C2.4165 14.9997 1.6665 15.7497 1.6665 16.6664C1.6665 16.8164 1.68317 16.9664 1.73317 17.1164L5.9665 32.5664C6.34984 33.9664 7.63317 34.9997 9.1665 34.9997H30.8332C32.3665 34.9997 33.6498 33.9664 34.0498 32.5664L38.2832 17.1164L38.3332 16.6664C38.3332 15.7497 37.5832 14.9997 36.6665 14.9997H28.6832ZM14.9998 14.9997L19.9998 7.66636L24.9998 14.9997H14.9998ZM19.9998 28.333C18.1665 28.333 16.6665 26.833 16.6665 24.9997C16.6665 23.1664 18.1665 21.6664 19.9998 21.6664C21.8332 21.6664 23.3332 23.1664 23.3332 24.9997C23.3332 26.833 21.8332 28.333 19.9998 28.333Z"
+                  fill="#C0504D"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_4253">
+                  <rect width="40" height="40" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            Product
+          </h2>
+          <p>
+            Find equipment or supplies required for your hobby. Buy, rent or
+            borrow from shops, online stores or from community members.
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-outline-primary">Get it</button>
+      </div>
+      <div class="div-2-card" id="program">
+        <div class="card-level-1">
+          <h2>
+            <svg
+              class="card-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1_4273)">
+                <rect x="8" y="13" width="24" height="19" fill="#0096C8" />
+                <path
+                  d="M26.6667 17.5498C26.1833 17.0665 25.3833 17.0665 24.9 17.5498L17.65 24.7998L15 22.1498C14.5167 21.6665 13.7167 21.6665 13.2333 22.1498C12.75 22.6332 12.75 23.4332 13.2333 23.9165L16.4667 27.1498C17.1167 27.7998 18.1667 27.7998 18.8167 27.1498L26.65 19.3165C27.15 18.8332 27.15 18.0332 26.6667 17.5498ZM31.6667 4.99984H30V3.33317C30 2.4165 29.25 1.6665 28.3333 1.6665C27.4167 1.6665 26.6667 2.4165 26.6667 3.33317V4.99984H13.3333V3.33317C13.3333 2.4165 12.5833 1.6665 11.6667 1.6665C10.75 1.6665 10 2.4165 10 3.33317V4.99984H8.33333C6.48333 4.99984 5.01667 6.49984 5.01667 8.33317L5 31.6665C5 33.4998 6.48333 34.9998 8.33333 34.9998H31.6667C33.5 34.9998 35 33.4998 35 31.6665V8.33317C35 6.49984 33.5 4.99984 31.6667 4.99984ZM30 31.6665H10C9.08333 31.6665 8.33333 30.9165 8.33333 29.9998V13.3332H31.6667V29.9998C31.6667 30.9165 30.9167 31.6665 30 31.6665Z"
+                  fill="#0096C8"
+                />
+                <path
+                  d="M26.7958 17.3625C26.3125 16.8792 25.5125 16.8792 25.0292 17.3625L17.7792 24.6125L15.1292 21.9625C14.6458 21.4792 13.8458 21.4792 13.3625 21.9625C12.8792 22.4458 12.8792 23.2458 13.3625 23.7292L16.5958 26.9625C17.2458 27.6125 18.2958 27.6125 18.9458 26.9625L26.7792 19.1292C27.2792 18.6458 27.2792 17.8458 26.7958 17.3625Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_4273">
+                  <rect width="40" height="40" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            Program
+          </h2>
+          <p>
+            Find events, meetups and workshops related to your hobby. Register
+            or buy tickets online.
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-outline-primary">Attend</button>
+      </div>
+    </div>
+    <div class="main-div-3">
+      <div class="add-your-own">
+        <h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_3083_426)">
+              <path
+                d="M20.0002 3.33331C10.8002 3.33331 3.3335 10.8 3.3335 20C3.3335 29.2 10.8002 36.6666 20.0002 36.6666C29.2002 36.6666 36.6668 29.2 36.6668 20C36.6668 10.8 29.2002 3.33331 20.0002 3.33331ZM26.6668 21.6666H21.6668V26.6666C21.6668 27.5833 20.9168 28.3333 20.0002 28.3333C19.0835 28.3333 18.3335 27.5833 18.3335 26.6666V21.6666H13.3335C12.4168 21.6666 11.6668 20.9166 11.6668 20C11.6668 19.0833 12.4168 18.3333 13.3335 18.3333H18.3335V13.3333C18.3335 12.4166 19.0835 11.6666 20.0002 11.6666C20.9168 11.6666 21.6668 12.4166 21.6668 13.3333V18.3333H26.6668C27.5835 18.3333 28.3335 19.0833 28.3335 20C28.3335 20.9166 27.5835 21.6666 26.6668 21.6666Z"
+                fill="#0096C8"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3083_426">
+                <rect width="40" height="40" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="add-own-tag">Add your own</span>
+        </h2>
+        <p>
+          Are you a teacher or expert? Do you sell or rent out equipment, venue
+          or event tickets? Or, you know someone who should be on hobbycue? Go
+          ahead and Add your Own page
+        </p>
+        <button type="button" class="btn btn-outline-primary add-new-btn">
+          Add new
+        </button>
+      </div>
+    </div>
+    <div class="main-div-4">
+      <div class="testimonial">
+        <h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_1_4729)">
+              <circle
+                cx="10"
+                cy="10"
+                r="30"
+                transform="rotate(-180 10 10)"
+                fill="white"
+              />
+              <path
+                d="M20 40.0005C31.0277 40.0005 40 31.0282 40 20.0005C40 16.7252 39.1373 13.6637 37.7383 10.9341L36 7.99854L33 4.99854L29.0566 2.2583C26.3293 0.862223 23.2723 0.000490634 20 0.000490347C8.9723 0.000489383 2.71253e-06 8.97278 1.74846e-06 20.0005C7.84383e-07 31.0282 8.97229 40.0005 20 40.0005ZM26 26.9985C23.791 26.9985 22 25.2075 22 22.9985C22 22.9125 22.0204 22.8316 22.0254 22.7466C22.0114 22.6656 22 22.5826 22 22.4966C22 22.2216 22.0526 15.7084 26.5996 12.2974C26.8696 12.0954 27.185 11.9966 27.498 11.9966C27.954 11.9966 28.4042 12.2051 28.6992 12.5981C29.1962 13.2611 29.0624 14.2008 28.4004 14.6978C26.8924 15.8288 26.0568 17.5196 25.5898 19.0396C25.7268 19.0256 25.859 18.9985 26 18.9985C28.209 18.9985 30 20.7895 30 22.9985C30 25.2075 28.209 26.9985 26 26.9985ZM14 26.9985C11.791 26.9985 10 25.2075 10 22.9985C10 22.9125 10.0204 22.8316 10.0254 22.7466C10.0114 22.6656 10 22.5826 10 22.4966C10 22.2216 10.0526 15.7084 14.5996 12.2974C14.8696 12.0954 15.185 11.9966 15.498 11.9966C15.954 11.9966 16.4042 12.2051 16.6992 12.5981C17.1962 13.2611 17.0624 14.2008 16.4004 14.6978C14.8924 15.8288 14.0568 17.5195 13.5898 19.0396C13.7268 19.0256 13.859 18.9985 14 18.9985C16.209 18.9985 18 20.7895 18 22.9985C18 25.2075 16.209 26.9985 14 26.9985Z"
+                fill="#8064A2"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1_4729">
+                <rect
+                  width="40"
+                  height="40"
+                  fill="white"
+                  transform="translate(40 40) rotate(-180)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="testimonials"> Testimonials</span>
+        </h2>
+        <p>
+          In a fast growing and ever changing city like Bangalore, it sometimes
+          becomes very difficult to find or connect with like minded people.
+          Websites like hobbycue.com is a great service which helps me get in
+          touch with, communicate, connect, and exchange ideas with other
+          dancers. It also provides the extra benefit of finding products and
+          services that I can avail, which I can be assured is going to be of
+          great quality as it comes recommended by people of the hobbycue
+          community. To have discussions, to get visibility, and to be able to
+          safely explore various hobbies and activities in my city, all under
+          one roof, is an excellent idea and I highly recommend it.
+        </p>
+        <div class="sub-testimonial">
+          <div id="audio-player">
+            <div class="play-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M8 6.82001V17.18C8 17.97 8.87 18.45 9.54 18.02L17.68 12.84C18.3 12.45 18.3 11.55 17.68 11.15L9.54 5.98001C8.87 5.55001 8 6.03001 8 6.82001Z"
+                  fill="#8064A2"
+                />
+              </svg>
+            </div>
+
+            <div class="line-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <circle cx="6" cy="6" r="6" fill="#8064A2" />
+              </svg>
+              <div class="hr-line"></div>
+              <span>0.00</span>
+            </div>
+
+            <div class="girl-with-mike">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <path
+                  d="M15.9998 18.6666C18.2132 18.6666 19.9998 16.88 19.9998 14.6666V6.66663C19.9998 4.45329 18.2132 2.66663 15.9998 2.66663C13.7865 2.66663 11.9998 4.45329 11.9998 6.66663V14.6666C11.9998 16.88 13.7865 18.6666 15.9998 18.6666ZM23.8798 14.6666C23.2265 14.6666 22.6798 15.1466 22.5732 15.8C22.0265 18.9333 19.2932 21.3333 15.9998 21.3333C12.7065 21.3333 9.97315 18.9333 9.42649 15.8C9.31982 15.1466 8.77315 14.6666 8.11982 14.6666C7.30649 14.6666 6.66649 15.3866 6.78649 16.1866C7.43982 20.1866 10.6398 23.32 14.6665 23.8933V26.6666C14.6665 27.4 15.2665 28 15.9998 28C16.7332 28 17.3332 27.4 17.3332 26.6666V23.8933C21.3598 23.32 24.5598 20.1866 25.2132 16.1866C25.3465 15.3866 24.6932 14.6666 23.8798 14.6666Z"
+                  fill="white"
+                />
+              </svg>
+              <img src="dancing-girl.png" alt="dancing-girl" />
+            </div>
+          </div>
+          <div class="user">
+            <img src="dancing-girl.png" alt="dancing-girl" />
+            <div class="user-name">
+              <p class="shubha">Shubha Nagarajan</p>
+              <p class="dancer">Classical Dancer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-div-5">
+      <div class="slide-arrow-container">
+        <div class="slide-arrow">
+          <a href="#hobbycue-logo"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M14.0067 11.08C14.3334 10.7533 14.3334 10.2266 14.0067 9.89997L8.4667 4.35997C8.2067 4.09997 7.7867 4.09997 7.5267 4.35997L1.9867 9.89997C1.66003 10.2266 1.66003 10.7533 1.9867 11.08C2.31337 11.4066 2.84003 11.4066 3.1667 11.08L8.00003 6.2533L12.8334 11.0866C13.1534 11.4066 13.6867 11.4066 14.0067 11.08Z"
+                fill="white"
+              /></svg
+          ></a>
+        </div>
+        <div class="slider-text">
+          <span>Go to top (Ctrl+Home)</span>
+        </div>
+      </div>
+
+      <div class="get-started">
+        <p>
+          Your <span class="passion">Hobby</span>, Your
+          <span class="hobby">Community...</span>
+        </p>
+        <button type="button" class="btn btn-primary btn-blue">
+          Get Started
+        </button>
+      </div>
+      <img src="banao-img-3-removebg.png" alt="banao-img-3" />
+    </div>
+    <div class="main-div-6">
+      <div class="hobbycue subdiv-6">
+        <p class="bold-1">Hobbycue</p>
+        <p value="about-us">About Us</p>
+        <p value="our-services">Our Services</p>
+        <p value="work-with-us">Work with Us</p>
+        <p value="faq">FAQ</p>
+        <p value="contact-us">Contact Us</p>
+      </div>
+      <div class="how-do-i subdiv-6">
+        <p class="bold-1">How Do I</p>
+        <p>Sign Up</p>
+        <p>Add a Listing</p>
+        <p>Claim Listing</p>
+        <p>Post a Query</p>
+        <p>Add a Blog Post</p>
+        <p>Other Queries</p>
+      </div>
+      <div class="quick-links subdiv-6">
+        <p class="bold-1">Quick Links</p>
+        <p>Listings</p>
+        <p>Blog Posts</p>
+        <p>Shop / Store</p>
+        <p>Community</p>
+      </div>
+      <div class="others subdiv-6">
+        <div class="social-media">
+          <p class="bold-1">Social Media</p>
+          <div class="social-media-list">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M11.41 6.1355H9.25244V4.72044C9.25244 4.18901 9.60465 4.06512 9.85272 4.06512C10.1002 4.06512 11.3753 4.06512 11.3753 4.06512V1.72889L9.2784 1.7207C6.95064 1.7207 6.42091 3.46314 6.42091 4.5782V6.1355H5.07471V8.54285H6.42091C6.42091 11.6323 6.42091 15.3548 6.42091 15.3548H9.25244C9.25244 15.3548 9.25244 11.5956 9.25244 8.54285H11.1631L11.41 6.1355Z"
+                  fill="#6D747A"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M5.03169 14.5008C11.0694 14.5008 14.3718 9.49859 14.3718 5.16066C14.3718 5.01859 14.3718 4.87716 14.3623 4.73634C15.0047 4.27163 15.5593 3.69628 16 3.03716C15.4009 3.30263 14.7653 3.47669 14.1146 3.55363C14.7997 3.1435 15.3128 2.49794 15.5577 1.73794C14.9134 2.12028 14.2084 2.38978 13.4733 2.53475C12.8526 1.87472 11.9857 1.5 11.0798 1.5C9.27719 1.5 7.79397 2.98325 7.79397 4.78575C7.79397 5.03581 7.82253 5.28509 7.87903 5.52866C5.24097 5.39644 2.77966 4.14863 1.11359 2.09891C0.247219 3.59034 0.6955 5.52316 2.12991 6.48097C1.60756 6.4655 1.09644 6.32456 0.64 6.07009V6.11169C0.640437 7.66838 1.74772 9.02141 3.27359 9.32963C2.79034 9.46141 2.28319 9.48066 1.79138 9.38594C2.22034 10.7198 3.45734 11.6393 4.85825 11.6656C3.69606 12.579 2.25959 13.0751 0.781438 13.0736C0.52025 13.0731 0.259313 13.0573 0 13.0262C1.50106 13.9895 3.24813 14.5006 5.03169 14.4983"
+                  fill="#6D747A"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M8 1.17188C6.14598 1.17188 5.9135 1.17973 5.18537 1.21296C4.45875 1.24612 3.9625 1.36151 3.52825 1.53028C3.07933 1.70474 2.69863 1.93816 2.31911 2.31768C1.9396 2.69719 1.70618 3.0779 1.53172 3.52681C1.36295 3.96103 1.24756 4.45729 1.21439 5.1839C1.18117 5.91204 1.17334 6.14451 1.17334 7.99853C1.17334 9.85252 1.18117 10.085 1.21439 10.8131C1.24756 11.5398 1.36295 12.036 1.53172 12.4702C1.70618 12.9191 1.9396 13.2998 2.31911 13.6794C2.69863 14.0589 3.07933 14.2923 3.52825 14.4668C3.9625 14.6355 4.45875 14.7509 5.18537 14.7841C5.9135 14.8173 6.14598 14.8252 8 14.8252C9.85399 14.8252 10.0865 14.8173 10.8146 14.7841C11.5412 14.7509 12.0375 14.6355 12.4717 14.4668C12.9206 14.2923 13.3013 14.0589 13.6809 13.6794C14.0604 13.2998 14.2938 12.9191 14.4682 12.4702C14.637 12.036 14.7524 11.5398 14.7855 10.8131C14.8188 10.085 14.8266 9.85252 14.8266 7.99853C14.8266 6.14451 14.8188 5.91204 14.7855 5.1839C14.7524 4.45729 14.637 3.96103 14.4682 3.52681C14.2938 3.0779 14.0604 2.69719 13.6809 2.31768C13.3013 1.93816 12.9206 1.70474 12.4717 1.53028C12.0375 1.36151 11.5412 1.24612 10.8146 1.21296C10.0865 1.17973 9.85399 1.17188 8 1.17188ZM8 2.40193C9.82277 2.40193 10.0387 2.40886 10.7585 2.44171C11.4241 2.47208 11.7856 2.5833 12.0261 2.67676C12.3448 2.8006 12.5722 2.94855 12.8111 3.18743C13.05 3.4263 13.1979 3.65374 13.3217 3.97236C13.4152 4.21291 13.5264 4.57438 13.5568 5.23997C13.5896 5.95981 13.5966 6.17573 13.5966 7.99853C13.5966 9.82131 13.5896 10.0372 13.5568 10.7571C13.5264 11.4227 13.4152 11.7841 13.3217 12.0247C13.1979 12.3433 13.05 12.5707 12.8111 12.8096C12.5722 13.0485 12.3448 13.1964 12.0261 13.3203C11.7856 13.4138 11.4241 13.525 10.7585 13.5553C10.0388 13.5882 9.82291 13.5951 8 13.5951C6.17706 13.5951 5.96119 13.5882 5.24143 13.5553C4.57584 13.525 4.21438 13.4138 3.97382 13.3203C3.65517 13.1964 3.42776 13.0485 3.18886 12.8096C2.94999 12.5707 2.80204 12.3433 2.67822 12.0247C2.58473 11.7841 2.47352 11.4227 2.44314 10.7571C2.4103 10.0372 2.40336 9.82131 2.40336 7.99853C2.40336 6.17573 2.4103 5.95981 2.44314 5.23997C2.47352 4.57438 2.58473 4.21291 2.67822 3.97236C2.80204 3.65374 2.94999 3.4263 3.18886 3.18743C3.42776 2.94855 3.65517 2.8006 3.97382 2.67676C4.21438 2.5833 4.57584 2.47208 5.24143 2.44171C5.96128 2.40886 6.1772 2.40193 8 2.40193Z"
+                  fill="#6D747A"
+                />
+                <path
+                  d="M8.00021 10.2806C6.74344 10.2806 5.72465 9.26184 5.72465 8.0051C5.72465 6.74833 6.74344 5.72954 8.00021 5.72954C9.25696 5.72954 10.2757 6.74833 10.2757 8.0051C10.2757 9.26184 9.25696 10.2806 8.00021 10.2806ZM8.00021 4.49951C6.06411 4.49951 4.49463 6.069 4.49463 8.0051C4.49463 9.94117 6.06411 11.5107 8.00021 11.5107C9.93629 11.5107 11.5058 9.94117 11.5058 8.0051C11.5058 6.069 9.93629 4.49951 8.00021 4.49951Z"
+                  fill="#6D747A"
+                />
+                <path
+                  d="M12.4631 4.35068C12.4631 4.80311 12.0963 5.16986 11.6439 5.16986C11.1915 5.16986 10.8247 4.80311 10.8247 4.35068C10.8247 3.89824 11.1915 3.53149 11.6439 3.53149C12.0963 3.53149 12.4631 3.89824 12.4631 4.35068Z"
+                  fill="#6D747A"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_4693)">
+                  <path
+                    d="M7.99994 0.015625C3.58169 0.015625 0 3.59741 0 8.01556C0 11.4048 2.10859 14.3022 5.08459 15.4678C5.01459 14.8348 4.95144 13.8614 5.11237 13.1703C5.25769 12.546 6.05044 9.19384 6.05044 9.19384C6.05044 9.19384 5.81109 8.71466 5.81109 8.00609C5.81109 6.89372 6.45584 6.06325 7.25869 6.06325C7.94116 6.06325 8.27091 6.57572 8.27091 7.19016C8.27091 7.87659 7.83391 8.90275 7.60831 9.85375C7.41988 10.6501 8.00766 11.2994 8.79297 11.2994C10.2149 11.2994 11.3079 9.80016 11.3079 7.636C11.3079 5.72059 9.93147 4.38134 7.96625 4.38134C5.68997 4.38134 4.35384 6.08866 4.35384 7.85306C4.35384 8.54069 4.61869 9.27794 4.94922 9.67872C5.01453 9.75794 5.02416 9.82741 5.00472 9.90819C4.94394 10.1609 4.80903 10.7042 4.7825 10.8154C4.74759 10.9619 4.66653 10.993 4.51497 10.9224C3.51578 10.4573 2.89112 8.99659 2.89112 7.82325C2.89112 5.29966 4.72463 2.98216 8.177 2.98216C10.9522 2.98216 13.1089 4.95962 13.1089 7.60247C13.1089 10.3596 11.3705 12.5785 8.95759 12.5785C8.14697 12.5785 7.38484 12.1573 7.12403 11.6599C7.12403 11.6599 6.72284 13.1873 6.62559 13.5617C6.44491 14.2566 5.95741 15.1276 5.63128 15.6588C6.37988 15.8906 7.17531 16.0156 7.99994 16.0156C12.4183 16.0156 16 12.434 16 8.01556C16 3.59741 12.4183 0.015625 7.99994 0.015625Z"
+                    fill="#6D747A"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_4693">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M5.55059 7.27725C5.54848 7.78341 5.55059 8.28954 5.55274 8.79568C6.40129 8.82333 7.25193 8.81055 8.10048 8.82333C7.7262 10.7054 5.1657 11.3158 3.81102 10.0866C2.41804 9.00836 2.48396 6.64353 3.93223 5.64187C4.94452 4.83374 6.38427 5.03363 7.39653 5.73331C7.79424 5.36541 8.16637 4.97197 8.52578 4.56365C7.68364 3.89163 6.65009 3.41313 5.55059 3.46418C3.25595 3.38761 1.1463 5.3973 1.10803 7.69197C0.961274 9.56766 2.19474 11.4072 3.93649 12.0708C5.67183 12.7385 7.89632 12.2834 9.00431 10.7246C9.73588 9.73993 9.89325 8.47245 9.80819 7.28151C8.38755 7.27087 6.96909 7.27299 5.55059 7.27725Z"
+                  fill="#6D747A"
+                />
+                <path
+                  d="M13.8487 7.27101C13.8445 6.84779 13.8423 6.42246 13.8402 5.99927C13.417 5.99927 12.9959 5.99927 12.5749 5.99927C12.5706 6.42248 12.5664 6.84567 12.5642 7.27101C12.1389 7.27312 11.7157 7.27527 11.2925 7.27953C11.2925 7.70272 11.2925 8.12379 11.2925 8.54489C11.7157 8.54915 12.141 8.55341 12.5642 8.55765C12.5685 8.98086 12.5685 9.40405 12.5727 9.82727C12.996 9.82727 13.417 9.82727 13.8402 9.82727C13.8423 9.40405 13.8445 8.98086 13.8487 8.55553C14.274 8.55127 14.6973 8.54915 15.1205 8.54489C15.1205 8.12379 15.1205 7.7006 15.1205 7.27953C14.6973 7.27527 14.2719 7.27527 13.8487 7.27101Z"
+                  fill="#6D747A"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M14.8871 4.52748C14.7217 3.90501 14.2346 3.41473 13.6161 3.24833C12.4951 2.94605 7.99996 2.94604 7.99996 2.94604C7.99996 2.94604 3.50481 2.94605 2.38375 3.24836C1.76528 3.41476 1.27819 3.90501 1.11287 4.52751C0.8125 5.6558 0.8125 8.00995 0.8125 8.00995C0.8125 8.00995 0.8125 10.3641 1.11287 11.4924C1.27819 12.1149 1.76528 12.5847 2.38375 12.7512C3.50481 13.0535 7.99996 13.0535 7.99996 13.0535C7.99996 13.0535 12.4951 13.0535 13.6161 12.7511C14.2346 12.5847 14.7217 12.1149 14.8871 11.4924C15.1874 10.3641 15.1874 8.00992 15.1874 8.00992C15.1874 8.00992 15.1874 5.6558 14.8871 4.52748Z"
+                  fill="#6D747A"
+                />
+                <path
+                  d="M6.52979 10.1469V5.87207L10.2869 8.00951L6.52979 10.1469Z"
+                  fill="#EBEDF0"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M15.1465 3.07013L12.9772 13.3004C12.8136 14.0225 12.3868 14.2021 11.7802 13.8621L8.47498 11.4264L6.88017 12.9603C6.70373 13.1368 6.55608 13.2844 6.21592 13.2844L6.45336 9.91813L12.5793 4.3826C12.8457 4.14517 12.5216 4.01357 12.1654 4.25104L4.59217 9.0196L1.33183 7.99917C0.622639 7.77773 0.609827 7.28995 1.47942 6.94982L14.232 2.03685C14.8224 1.81545 15.339 2.16838 15.1465 3.07013Z"
+                  fill="#6D747A"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M13.3333 2H2.66667C1.2 2 0 3.2 0 4.66667V11.3333C0 12.8 1.2 14 2.66667 14H13.3333C14.8 14 16 12.8 16 11.3333V4.66667C16 3.2 14.8 2 13.3333 2ZM14.4 5.86667L9.13333 9.4C8.8 9.6 8.4 9.73333 8 9.73333C7.6 9.73333 7.2 9.6 6.86667 9.4L1.6 5.86667C1.33333 5.66667 1.26667 5.26667 1.46667 4.93333C1.66667 4.66667 2.06667 4.6 2.4 4.8L7.66667 8.33333C7.86667 8.46667 8.2 8.46667 8.4 8.33333L13.6667 4.8C14 4.6 14.4 4.66667 14.6 5C14.7333 5.26667 14.6667 5.66667 14.4 5.86667Z"
+                  fill="#6D747A"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="invite-friend">
+          <p class="bold-1">Invite friend</p>
+
+          <div class="input-group mb-3">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email ID"
+              aria-label="Email ID"
+              aria-describedby="basic-addon2"
+            />
+            <span class="input-group-text" id="basic-addon2">Invite</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="footer-text">© Purple Cues Private Limited</span>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

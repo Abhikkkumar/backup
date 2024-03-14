@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes-Villains</title>
+</head>
+<body>
+    <% if(locals.err){ %>
+        <h1>No data available for the searched name.</h1>
+        <h2>Kindly search another name.</h2>
+        <form action="/image" method="post">
+            <label for="charName">
+                Enter Superhero/Supervillan name:
+            </label>
+            <input type="text" id="charName" name="charName">
+            <input type="submit">
+        </form>
+        <% }else{ %>
+            <% if(locals.data){ %>
+            <h1><%= data.name %></h1>
+            <img src="<%=data.imgLink.url%>" alt="supre-hero-villan-img">
+            <form action="/" method="get">
+                <button type="submit">Search another</button>
+            </form>
+            <% }else{ %>
+                <h1>Welcome to Superhero / Supervillan wikipedia</h1>
+                <form action="/image" method="post">
+                    <label for="charName">
+                        Enter Superhero/Supervillan name:
+                    </label>
+                    <input type="text" id="charName" name="charName">
+                    <input type="submit">
+                </form>
+            <% } %>
+    <% } %>
+</body>
+</html>

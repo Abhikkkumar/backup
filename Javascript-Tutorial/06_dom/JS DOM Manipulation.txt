@@ -1,0 +1,44 @@
+JS DOM Manipulation
+
+1. document.getElementById("id_name") 	- to select an html element by its id
+2. document.getElementById("id_name").id  - to get id of an elem
+3. document.getElementById("id_name").className - to get class of an elem
+4. document.getElementById("id_name").getAttribute("id/class/anyOtherAttribute") - to get attribute value of elem
+5. document.getElementById("id_name").setAttribute("id/class/anyOtherAttribute","value_to_replace_old_value"); - to replace old value of given attribute
+
+// we can also change styling of any element by using DOM
+
+6. const elem = document.getElementById("title"); // selects element having id= 'title' in 'elem'. Now, 'elem' can be used for manipulation
+   elem.style.backgroundColor = 'green'
+
+7. // to get text in any html tag
+	.innerHTML (inner html tags as well), .innerText (visible text), .textContent (all text) is used
+8. document.getElementsByClassName("className") - to select elem by class; it returns a HTML Collection
+
+//----------------------------        HOW TO CONVERT 'HTML Collection' TO ARRAY ?
+const convertedArr = Array.from( document.getElementsByClassName("className") ); // here 'convertedArr' holds an array
+
+----------------------------------------
+9. document.querySelector("h2") - to select first 'h2' tag 
+
+10. .querySelector("#id_name") - to select element by id
+
+11. .querySelector(".class_name") - to select first elem having class= 'className'
+
+12. const allList = document.querySelectorAll("li")	// stores 'nodeList' in 'allList'
+	allList[2].style.backgroundColor = 'green'	// we are changing background-color of 3rd 'li' 
+
+//PRACTICE:	
+		const hold = document.querySelectorAll("h3");	 // 'hold' store a nodeList containing each 'h3'
+		hold.forEach((eachNode)=>{eachNode.style.backgroundColor = 'green'});	//changing background-color of each 'h3' to green
+
+13. const parent = document.querySelector(".parent");
+        
+    console.log(parent.children);	//gives HTML Collection containing children of class='parent' as o/p
+
+/*
+	for(let i=0;i<parent.children.length;i++){
+            console.log(parent.children[i]);
+            parent.children[2].style.backgroundColor ='red'
+        }
+*/

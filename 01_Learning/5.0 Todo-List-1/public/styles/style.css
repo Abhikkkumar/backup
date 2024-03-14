@@ -1,0 +1,19 @@
+*{
+    padding:0;
+    margin:0;
+    background-color: #e4e9fd;
+    text-decoration: none;
+
+}
+.header{
+    height: 80px;
+    width: 100%;
+    padding: 10px;
+}
+a{
+    margin:25px;
+}
+.bdy{
+    text-align: center;
+    
+}
